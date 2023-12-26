@@ -6,6 +6,6 @@ const calculateBonus = (a, b) => {
   debugger; //программа посчитала бонус
   return bonus;
 };
-console.log(calculateBonus(66, 55));
+console.log(calculateBonus(16, 15));
 
 module.exports = calculateBonus;
