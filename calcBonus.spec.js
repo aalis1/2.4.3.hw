@@ -1,21 +1,33 @@
-const calculateBonus = require(`./calcBonus`);
+const calculateBonus = require("./calcBonus");
 
-describe(`calculate the bonus depending on the amount`, () => {
-  it(`calculate the bonus depending on the amount`, () => {
-    sum > 50;
-    expect(calculateBonus(24, 54)).toBe((bonus = 50));
-  });
-
-  it(`calculate the bonus depending on the amount`, () => {
-    sum <= 50;
-    expect(calculateBonus(2, 4)).toBe((bonus = sum));
-  });
+test("test on sum > 50", () => {
+  expect(calculateBonus(38, 36)).toBe(50);
 });
 
-// test(`calculate the bonus depending on the amount`, () => {
-//   expect(sum(a, b) > 50, (bonus = 50)).toBe(true);
-// });
+test("test on value = 0", () => {
+  expect(calculateBonus(0, 0)).toBe(0);
+});
 
-// test(`calculate the bonus depending on the amount`, () => {
-//   expect(sum(a, b) < 50, (bonus = sum)).toBe(true);
-// });
+test("test on sum < 50", () => {
+  expect(calculateBonus(8, 6)).toBe(14);
+});
+
+test("test on sum = 50", () => {
+  expect(calculateBonus(38, 12)).toBe(50);
+});
+
+test("test on value negative values", () => {
+  expect(calculateBonus(-10, -45)).toBe(-55);
+});
+
+test("test on big number", () => {
+  expect(calculateBonus(2438540000, 382340020)).toBe(50);
+});
+
+test("test on null", () => {
+  expect(calculateBonus(null, null)).toBe(NaN);
+});
+
+test("test on text", () => {
+  expect(calculateBonus("ten", "two")).toBe("text is not a number");
+});

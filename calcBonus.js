@@ -3,9 +3,10 @@ const calculateBonus = (a, b) => {
   const sum = a + b;
   debugger; //программа видит значание а и в, получает сумму
   sum > 50 ? (bonus = 50) : (bonus = sum);
-  debugger; //программа посчитала бонус
+  debugger; //программа посчитала бонуc
   return bonus;
 };
-console.log(calculateBonus(16, 15));
+
+console.log(calculateBonus(60, 12));
 
 module.exports = calculateBonus;
